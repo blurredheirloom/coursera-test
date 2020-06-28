@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AngularJS Module 1 Solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body ng-app="LunchCheck">
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="Insert dishes separated by comma"
+             class="form-control" ng-model="dishes" ng-style="{'border-color': color}">
+             <label>Please note: Empty items like , , will not be considered towards the count</label>
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkDishes()">Check If Too Much</button>
+         </div>
+         <div class="form-group message" ng-style="{color: color}">
+            {{message}}
+         </div>
+   </div>
+
+</body>
+</html>
