@@ -16,11 +16,11 @@ function LunchCheckController($scope) {
     var count = 0;
     if (dishes) {
       var array = dishes.split(',');
-      for (var idx in array) {
-        if (array[idx].trim().length != 0) {
-          count++;
+      array.forEach((item) => {
+        if (item != false) {
+            count++;
         }
-      }
+      });
     }
     return count;
   }
@@ -36,14 +36,6 @@ function LunchCheckController($scope) {
     } else {
       return 'Too much!';
     }
-  }
-
-  function bgColor() {
-    if (num === 0) {
-      return 'background-color: red';
-    }
-    else 
-        return 'background-color: green';
   }
 }
 
