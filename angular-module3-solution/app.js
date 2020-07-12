@@ -34,7 +34,7 @@
         
         service.getMatchedMenuItems = function (searchTerm) {
             return $http({method: "GET", url: (ApiBasePath + "/menu_items.json")}).then(function (result) {
-                return result.data.menu_items.filter(item => item.description.indexOf(searchTerm) !== -1);
+                return result.data.menu_items.filter(item => item.description.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) !== -1);
             });
         };
     }
