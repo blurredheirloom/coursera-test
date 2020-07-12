@@ -29,6 +29,18 @@ input[type="text"] {
   width: 3em;
   height: 3em;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
